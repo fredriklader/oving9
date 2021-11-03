@@ -18,6 +18,14 @@ class Flervalg:
             return "Riktig \n"
         else:
             return "Feil \n"
+    def poeng(self, svaret):
+        poeng = 0
+        svar = int(self.svar)
+        svar_bruker = svaret-1
+        if svar_bruker == svar:
+            poeng = 1
+        return poeng
+
 
 
     def korrekt_svar_tekst(self):
@@ -46,9 +54,14 @@ if __name__== "__main__":
             print(print1.korrekt_svar_tekst())
             print("Spiller 1: " + print1.sjekk_svar(spiller1_svar))
             print("Spiller 2: " + print1.sjekk_svar(spiller2_svar))
+            spiller1_poeng += print1.poeng(spiller1_svar)
+            spiller2_poeng += print1.poeng(spiller2_svar)
             spørsmål = 0
             svar = 0
             alternativ.clear()
             lengde = 0
             ordene.clear()
+
+    print(f"Poengsummen for spiller 1 er: {spiller1_poeng}.")
+    print(f"Poengsummer for spiller 2 er: {spiller2_poeng}.")
     fila.close()
