@@ -18,6 +18,8 @@ class Flervalg:
             return "Riktig \n"
         else:
             return "Feil \n"
+
+
     def poeng(self, svaret):
         poeng = 0
         svar = int(self.svar)
@@ -31,7 +33,7 @@ class Flervalg:
     def korrekt_svar_tekst(self):
         riktig_svar_nr = int(self.svar)
         svarene = self.alternativ
-        return "\nRiktig svar er " + (svarene[riktig_svar_nr]) + ".\n"
+        return "\nRiktig svar er svaralternativ " + str(riktig_svar_nr) + ": " + (svarene[riktig_svar_nr]) + ".\n"
 
 
 if __name__== "__main__":
